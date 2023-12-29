@@ -140,14 +140,14 @@ export default function NavBar() {
             size={"full"}
         >
             <DrawerOverlay />
-            <DrawerContent p={0}>
+            <DrawerContent>
                 <CloseIcon cursor={"pointer"} 
                     mt={3}
                     mr={3}
                     alignSelf={"end"} 
                     onClick={()=> setSearchDrawer(false)}
                 />
-                <Center>
+                <Center >
                     <HStack 
                         bgColor={"#eaeaea"} 
                         // {{base:12}}
