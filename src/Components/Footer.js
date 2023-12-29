@@ -6,7 +6,7 @@ export default function Footer() {
   const brands=["Raymond","Reid & Taylor","OCM","Siyaram","Monte Carlo","Oxemberg","J. Hampstead"]
   const oBrands=["Birla Century","Linen Club","Arvind"]
   return (
-    <Center bgColor={"#206462"} color={"white"} h={"450px"} w={"100%"}>
+    <Center bgColor={"white"} color={"black"} h={"450px"} w={"100%"}>
       <SimpleGrid minChildWidth={"150px"} w={"85%"}>
         <VStack alignItems={"start"} bgColor={""}>
           <Text fontWeight={"bold"} fontSize={"x-large"}>
@@ -15,7 +15,7 @@ export default function Footer() {
           {
             brands.map((item,index)=>{
               return(
-                <Text fontSize={"medium"} key={index} color={"#f1f2f4"}>{item}</Text>
+                <Text fontSize={"medium"} key={index} color={"#black"}>{item}</Text>
               )
             })
           }
@@ -27,17 +27,17 @@ export default function Footer() {
           {
             oBrands.map((item,index)=>{
               return(
-                <Text fontSize={"medium"} key={index} color={"#f1f2f4"}>{item}</Text>
+                <Text fontSize={"medium"} key={index} color={"#black"}>{item}</Text>
               )
             })
           }
         </VStack>
-        <VStack alignItems={"start"} bgColor={""} id='contact us'>
+        <VStack alignItems={"start"} bgColor={""} id='contactUs'>
           <Text fontWeight={"bold"} fontSize={"x-large"}>
             Contact Us
           </Text> 
-          <Text fontSize={"medium"} color={"#f1f2f4"}>+91 9999999999</Text>
-          <Text fontSize={"medium"} color={"#f1f2f4"}>abc@example.com</Text>
+          <Text fontSize={"medium"} color={"black"}>+91 9999999999</Text>
+          <Text fontSize={"medium"} color={"black"}>abc@example.com</Text>
 
         </VStack>
         <Card alignItems={"center"} boxShadow={"2px 2px 10px black"} h={"260px"}>
