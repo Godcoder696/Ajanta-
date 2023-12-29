@@ -40,7 +40,7 @@ export default function Footer() {
           <Text fontSize={"medium"} color={"black"}>abc@example.com</Text>
 
         </VStack>
-        <Card alignItems={"center"} boxShadow={"2px 2px 10px black"} h={"260px"}>
+        <Card alignItems={"center"} boxShadow={"2px 2px 10px black"} h={"160px"}>
           <CardHeader >
             <Image src={AjantaLocation} border={"1px solid gray"} borderRadius={5}></Image>
           </CardHeader>
