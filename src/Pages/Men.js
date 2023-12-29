@@ -1,5 +1,6 @@
-import { Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import { Box, Center, Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import React from 'react'
+import Card from './Components/Card'
 
 export default function Men() {
   return (
@@ -11,59 +12,38 @@ export default function Men() {
           </TabList>
           <TabPanels>
             <TabPanel>
-                    <SimpleGrid p={""} spacing={0} 
+              <SimpleGrid 
                 minChildWidth={{base:"150px",sm:"200px",md:"300px"}} 
-                mt={1} ml={"1%"} rowGap={5} columnGap={4}
+                mt={1} ml={"1%"} rowGap={8} columnGap={""}
               >
                 
                 {/* Items */}
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  h={{base:"220px", sm: "340px",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
+                <Card 
+                  desc="SHORT DESCRIPTION"
+                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
                 />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
-                />
-                <Image 
-                  src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-                  // h="500px"
-                  h={{base:"220px", sm: "340",md:"420px",xl:"470px"}}
-                  borderRadius={20}
-                />
+
+
               </SimpleGrid> 
             </TabPanel>
             <TabPanel>

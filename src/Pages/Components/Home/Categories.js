@@ -25,24 +25,24 @@ export default function Categories() {
     <>
 
       {/* Categories Wrapper */}
-      <HStack mt={10} spacing={-2} flexDirection={{base:"column",md:"row"}}>
+      <Center mt={10} flexDirection={{base:"column",md:"row"}}>
 
         {/* Category Button */}
-        <Button h={"300px"} w={"400px"} ml={"2%"} borderRadius={20} colorScheme='gray' 
+        <Button h={"300px"} w={{md:"300px",xl:"400px"}} ml={"2%"} borderRadius={20} colorScheme='gray' 
           display={{base:"none",md:"initial"}}
         >
 
           {/* Category Button Text */}
           <VStack align={"start"} w={"75%"} fontWeight={"bold"} spacing={-2}>
             <Text fontWeight={"bold"}>OUR</Text>
-            <Heading >Main Categories</Heading>
+            <Heading>Main Categories</Heading>
             <Text fontSize={"x-large"}>As gorgeous as you</Text>
           </VStack>
 
         </Button>
 
         {/* Categories i.e. MEN & WOMEN */}
-        <HStack justify={"space-evenly"} >
+        <HStack justify={"space-evenly"} ml={1}>
           {
             // looping categories array
             categories.map((obj,index)=>{
@@ -68,7 +68,7 @@ export default function Categories() {
             })
           }
         </HStack>
-      </HStack>
+      </Center>
     </>
   )
 }
