@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardBody, CardHeader, Center, HStack, Image, Link, SimpleGrid, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Card, CardBody, CardHeader, Center, HStack, Image, Link, SimpleGrid, SlideFade, Text, VStack } from '@chakra-ui/react'
 import AjantaLocation from '../Assets/Location/AjantaLocation.png';
 import { ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons';
 import MobFooter from './MobFooter';
@@ -10,12 +10,12 @@ export default function Footer() {
   let [hover,setHover]= useState(false)
   return (
     <>
-      <Center bgColor={"white"} color={"black"} h={{xl:"450px",md:"350px"}} w={"100%"} 
+      <Center bgColor={"#2c7a7b"} color={"white"} h={{xl:"400px",md:"350px"}} w={"100%"} 
         display={{base:"none",md:"flex"}}>
 
         <SimpleGrid minChildWidth={"150px"} w={"85%"}>
           <VStack alignItems={"start"} bgColor={""}>
-            <Text fontWeight={"bold"} fontSize={"x-large"} color={"#184a49"}>BRANDS</Text> 
+            <Text fontWeight={"bold"} fontSize={"x-large"} color={"white"}>AUTHORIZED DEALER</Text> 
             {
               brands.map((item,index)=>{
                 return(
@@ -25,19 +25,19 @@ export default function Footer() {
             }
           </VStack>
           <VStack alignItems={"start"} bgColor={""}>
-            <Text fontWeight={"bold"} fontSize={"x-large"} color={"#184a49"}>OTHERS</Text> 
+            <Text fontWeight={"bold"} fontSize={"x-large"} color={"white"}>OTHERS</Text> 
             {
               oBrands.map((item,index)=>{
                 return(
-                  <Text fontSize={"medium"} key={index} color={"#black"}>{item}</Text>
+                  <Text fontSize={"medium"} key={index} >{item}</Text>
                 )
               })
             }
           </VStack>
           <VStack alignItems={"start"} bgColor={""} id='contactUs'>
-            <Text fontWeight={"bold"} fontSize={"x-large"} color={"#184a49"}>Contact Us</Text> 
-            <Text fontSize={"medium"} color={"black"}>+91 9999999999</Text>
-            <Text fontSize={"medium"} color={"black"}>abc@example.com</Text>
+            <Text fontWeight={"bold"} fontSize={"x-large"} color={"white"}>CONTACT US</Text> 
+            <Text fontSize={"medium"} color={"white"}>+91 9999999999</Text>
+            <Text fontSize={"medium"} color={"white"}>abc@example.com</Text>
           </VStack>
 
           <Link href='https://maps.app.goo.gl/JYJ2PmfBrctkfzeN7' target='_blank' display={{base:"none",xl:"initial"}}>
@@ -46,14 +46,15 @@ export default function Footer() {
               onMouseOut={()=>setHover(false)}
             >
               <Image src={AjantaLocation} h={"100%"} w={"100%"} 
-                borderRadius={"20"} boxShadow={"1px 1px 3px  black"}
+                borderRadius={"20"} boxShadow={"1px 1px 3px black"}
                 filter={hover?"blur(2px)":""}
                 />
-              <Button display={hover?"flex":"none"} 
-                pos={"absolute"} colorScheme='teal' >
-                <LinkIcon/>
-                <Text ml={3}>LOCATE US</Text>
-              </Button>
+                
+                <Button display={hover?"flex":"none"} 
+                  pos={"absolute"} colorScheme='teal' >
+                  <LinkIcon/>
+                  <Text ml={3}>LOCATE US</Text>
+                </Button>
             </Center>
           </Link>
 
@@ -63,7 +64,8 @@ export default function Footer() {
             mt={"5"}
             pos={"absolute"} colorScheme='teal' >
             <LinkIcon/>
-            <Text ml={3}>LOCATE US</Text>
+            
+              <Text ml={3}>LOCATE US</Text>
           </Button>
 
         </SimpleGrid>

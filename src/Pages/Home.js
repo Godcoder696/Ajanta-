@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react'
 import Slider from './Components/Home/Slider';
 import Categories from './Components/Home/Categories';
 import BestSeller from './Components/Home/BestSeller';
+import Marque from './Components/Home/Marque';
 
 export default function Home() {
 
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* Bestseller grid */}
       <BestSeller/>
+
+      {/* Marque animation */}
+      <Marque/>
 
     </Box>
   )

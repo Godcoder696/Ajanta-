@@ -7,8 +7,8 @@ export default function Men() {
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
           <TabList mb='1em'>
-            <Tab>Stitched</Tab>
-            <Tab>Unstitched</Tab>
+            <Tab>Ajanta Cloth House</Tab>
+            <Tab>Ajanta Collection</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

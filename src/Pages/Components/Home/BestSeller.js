@@ -1,6 +1,5 @@
 import { 
   Heading,
-  Image, 
   SimpleGrid } from '@chakra-ui/react'
 import Card from '../Card'
 
