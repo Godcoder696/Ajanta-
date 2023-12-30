@@ -6,6 +6,7 @@ import {
   Image, 
   Text, 
   VStack } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 export default function Categories() {
 
@@ -25,7 +26,7 @@ export default function Categories() {
     <>
 
       {/* Categories Wrapper */}
-      <Center mt={10} flexDirection={{base:"column",md:"row"}}>
+      <Center mt={10} justifyContent={{base:"center",xl:"flex-start"}} >
 
         {/* Category Button */}
         <Button h={"300px"} w={{md:"300px",xl:"400px"}} ml={"2%"} borderRadius={20} colorScheme='gray' 
@@ -48,22 +49,23 @@ export default function Categories() {
             categories.map((obj,index)=>{
 
               return(
-                <Center bgColor={"white"} h={{base:"200px",md:"300px"}} 
+                <Link key={index} to={`/${obj.name.toLowerCase()}`}>
+                  <Center bgColor={"white"} h={{base:"200px",md:"300px"}} 
                   w={{base:"150px",md:"220px"}} ml={{md:"2%"}} borderRadius={20}
-                  key={index}
-                >
-
-                  {/* category image */}
-                  <Image src={obj.src} h={"100%"} w={"100%"} borderRadius={20}/>
-
-                  {/* category name */}
-                  <Heading color={"white"} position={"absolute"} 
-                    letterSpacing={3} mt={10}
-                    textShadow={"1px 1px 5px gray"}
                   >
-                    {obj.name}
-                  </Heading>              
-                </Center>
+
+                    {/* category image */}
+                    <Image src={obj.src} h={"100%"} w={"100%"} borderRadius={20}/>
+
+                    {/* category name */}
+                    <Heading color={"white"} position={"absolute"} 
+                      letterSpacing={3} mt={10}
+                      textShadow={"1px 1px 5px gray"}
+                    >
+                      {obj.name}
+                    </Heading>              
+                  </Center>
+                </Link>
               )
             })
           }
