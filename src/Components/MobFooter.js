@@ -40,7 +40,7 @@ export default function MobFooter() {
             </AccordionItem>
             <AccordionItem>
                 <h2>
-                <AccordionButton p={6}>
+                <AccordionButton p={6} id='contactUs'>
                     <Text as="span" flex='1' textAlign='left' 
                         fontSize={"x-large"} fontWeight={"bold"} color={"#184a49"}
                     >

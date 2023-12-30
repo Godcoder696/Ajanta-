@@ -1,43 +1,42 @@
-// chakra ui imps
+    // chakra ui imps
 import {
     HStack,
     Input,
     Image,
     Button,
-    Box,
-    Center,
     Drawer,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButton,
-    DrawerHeader,
-    DrawerBody,
-    DrawerFooter,
-    Text
+    Center,
 } from '@chakra-ui/react'
 
 // react-router-dom imp
 import {Link} from 'react-router-dom'
 
 // icons
-import {CloseIcon, HamburgerIcon, SearchIcon} from '@chakra-ui/icons';
+import { CloseIcon, HamburgerIcon, SearchIcon} from '@chakra-ui/icons';
 
 // logo
 import AjantaBlack from '../Assets/Ajanta Sirsa.png';
 
 // hooks
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import { AppState } from '../Context/AppProvider';
 import SearchElements from './SearchElements';
+import NavMobDrawer from './NavMobDrawer';
+
 
 export default function NavBar() {
 
     // nav state: which button pressed
-    const [navState,setNavState]= useState(0)
-
-    const [searchDrawer,setSearchDrawer]= useState(false);
+    const {navState,setNavState}= AppState()
 
     // navBar items
-    const navItems=["home","men","women"]
+    const navItems=["home","about us","men","women"]
+
+    const {searchDrawer,setSearchDrawer}= AppState()
+    const {setNavDrawer,NavDrawer}= AppState()
 
     // shadow effect for navbar on-scroll
     window.addEventListener('scroll',(e)=>{
@@ -55,6 +54,9 @@ export default function NavBar() {
         }
         
     })
+    useEffect(()=>{
+        setSearchDrawer(searchDrawer)
+    },[searchDrawer])
 
   return (
     <>
@@ -96,16 +98,6 @@ export default function NavBar() {
                         )
                     })
                 }
-                <a href={'#contactUs'} >
-                    <Button 
-                        variant={"ghost"} 
-                        colorScheme={navState===3?'teal':'gray'} 
-                        onClick={()=>setNavState(3)}
-                        fontSize={{base:"10",sm:"11",md:"13",lg:"16"}}
-                    >
-                        CONTACT US
-                    </Button>
-                </a>
             </HStack>
 
             <HStack 
@@ -116,7 +108,9 @@ export default function NavBar() {
                 w={{base:"24vw",sm:"26vw",md:"28vw",xl:"30vw"}}
                 display={{base:'none',md:'flex'}}
                 cursor={"pointer"}
-                onClick={()=>setSearchDrawer(true)}
+                onClick={()=>{
+                    setSearchDrawer(true)
+                }}
             >
                 <SearchIcon boxSize={5}ml={3}/>
                 <Input
@@ -131,42 +125,47 @@ export default function NavBar() {
             <HStack w={20} display={{base:'flex',md:'none'}}justify="space-evenly">
                 <SearchIcon boxSize={5}ml={{md:3}} cursor={"pointer"} 
                 onClick={()=>setSearchDrawer(true)}/>
-                <HamburgerIcon boxSize={7} cursor={"pointer"}/>
+                <HamburgerIcon boxSize={7} cursor={"pointer"} onClick={()=>setNavDrawer(true)}/>
             </HStack>
         </HStack>
+        
         <Drawer
-            isOpen={searchDrawer}
-            placement='bottom'
-            size={"full"}
+          isOpen={searchDrawer}
+          placement='bottom'
+          size="full"
+          onClose={()=>{
+            setSearchDrawer(!searchDrawer)
+          }}
         >
-            <DrawerOverlay />
-            <DrawerContent>
-                <CloseIcon cursor={"pointer"} 
-                    mt={3}
-                    mr={3}
-                    alignSelf={"end"} 
-                    onClick={()=> setSearchDrawer(false)}
-                />
-                <Center >
-                    <HStack 
-                        bgColor={"#eaeaea"} 
-                        // {{base:12}}
-                        h={"14"} 
-                        borderRadius={10} 
-                        justify={"space-evenly"} 
-                        w={{base:"260px",sm:"280px",md:"340px",xl:"380px"}}
-                    >
-                        <SearchIcon boxSize={5}ml={3}/>
-                        <Input
-                            h={"80%"} 
-                            w={{base:"200px",sm:"220px",md:"300px",xl:"320px"}} 
-                            placeholder='Search clothes'
-                        />
-                    </HStack>
-                </Center>
-                <SearchElements/>
-            </DrawerContent>
-        </Drawer>
+        <DrawerOverlay />
+          <DrawerContent>
+            <CloseIcon cursor={"pointer"} 
+                mt={3}
+                mr={3}
+                alignSelf={"end"} 
+                onClick={()=> setSearchDrawer(false)}
+            />
+            <Center >
+                <HStack 
+                    bgColor={"#eaeaea"} 
+                    // {{base:12}}
+                    h={"14"} 
+                    borderRadius={10} 
+                    justify={"space-evenly"} 
+                    w={{base:"260px",sm:"280px",md:"340px",xl:"380px"}}
+                >
+                    <SearchIcon boxSize={5}ml={3}/>
+                    <Input
+                        h={"80%"} 
+                        w={{base:"200px",sm:"220px",md:"300px",xl:"320px"}} 
+                        placeholder='Search clothes'
+                    />
+                </HStack>
+            </Center>
+            <SearchElements/>
+        </DrawerContent>
+      </Drawer>
+          <NavMobDrawer></NavMobDrawer>
     </>
   )
 }

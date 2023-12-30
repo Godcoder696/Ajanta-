@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Drawer() {
+export default function AboutUs() {
   return (
     <>
-      
+        About Us 
     </>
   )
 }
