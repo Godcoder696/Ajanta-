@@ -1,4 +1,4 @@
-import { Center, Image, Text } from '@chakra-ui/react'
+import { Box, Center, Image, SlideFade } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
 export default function Card(props) {
@@ -19,20 +19,32 @@ export default function Card(props) {
                     h={{base:"220px", sm: "340px",md:"420px",xl:"470px"}}
                     w={{base:"150px",sm:"200px",md:"300px"}}
                     borderRadius={20}
-                    filter={enter?"blur(3px)":""}
+                    // filter={enter?"blur(3px)":""}
                 />
                     
                 {
                     enter && 
-                    <Center pos={"absolute"} zIndex={1} color={"white"} 
-                        fontSize={{base:"small",md:"large",xl:"x-large"}}
-                        fontWeight={"bold"}
-                        h={{base:"220px", sm: "340px",md:"420px",xl:"470px"}}
-                        w={{base:"150px",sm:"200px",md:"300px"}}
-                        alignItems={"center"}
-                    >
-                        <Text>{props.desc}</Text>
-                    </Center>
+                    <>
+                       
+                        <Center pos={"absolute"}
+                            background={"linear-gradient(#f1f2f400,#2c7a7b)"}
+                            fontSize={{base:"small",md:"large",xl:"x-large"}}
+                            h={{base:"220px", sm: "340px",md:"420px",xl:"470px"}}
+                            w={{base:"150px",sm:"200px",md:"300px"}}
+                            alignItems={"center"}
+                            borderRadius={20}
+                        >
+                        </Center>
+                        <Center pos={"absolute"} fontWeight={"bold"} color={"white"} 
+                            fontSize={{base:"small",md:"large",xl:"x-large"}}
+                            h={{base:"220px", sm: "340px",md:"420px",xl:"470px"}}
+                            w={{base:"150px",sm:"200px",md:"300px"}}
+                        >
+                            <SlideFade  in={true} offsetY='200px'>
+                                {props.desc}
+                            </SlideFade>
+                        </Center>
+                    </>
                 }
             </Center>
         </Center> 

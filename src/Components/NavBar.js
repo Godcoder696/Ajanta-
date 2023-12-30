@@ -138,7 +138,7 @@ export default function NavBar() {
           }}
         >
         <DrawerOverlay />
-          <DrawerContent>
+        <DrawerContent>
             <CloseIcon cursor={"pointer"} 
                 mt={3}
                 mr={3}
@@ -147,8 +147,7 @@ export default function NavBar() {
             />
             <Center >
                 <HStack 
-                    bgColor={"#eaeaea"} 
-                    // {{base:12}}
+                    bgColor={"#eaeaea"}
                     h={"14"} 
                     borderRadius={10} 
                     justify={"space-evenly"} 
@@ -165,7 +164,7 @@ export default function NavBar() {
             <SearchElements/>
         </DrawerContent>
       </Drawer>
-          <NavMobDrawer></NavMobDrawer>
+        <NavMobDrawer></NavMobDrawer>
     </>
   )
 }
