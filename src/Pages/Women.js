@@ -18,10 +18,10 @@ export default function Women() {
               >
                 
                 {/* Items */}
-                <Card 
-                  src='https://www.koskii.com/cdn/shop/files/koskii-wine-kashmirithreadwork-georgette-designer-salwar-suit-ssrm0030431_wine_3_1800x1800.jpg?v=1690976407'
+                {/* <Card 
+                  src={sample}
                   desc='SHORT DESCRIPTION'
-                />
+                /> */}
                 <Card 
                   src='https://www.koskii.com/cdn/shop/files/koskii-wine-kashmirithreadwork-georgette-designer-salwar-suit-ssrm0030431_wine_3_1800x1800.jpg?v=1690976407'
                   desc='SHORT DESCRIPTION'
