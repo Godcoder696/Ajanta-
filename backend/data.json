@@ -1,14 +1,7 @@
 [
     {
-        "name":"CAPITAL LETTERS",
-        "imgName":"joh bhi image ka name hai in folder",
-        "category":"stitched or unstitched (in small letters)",
-        "gender":"f or m (in small letters)"
-    },
-    {
-        "name":"CAPITAL LETTERS",
-        "imgName":"joh bhi image ka name hai in folder",
-        "category":"stitched or unstitched (in small letters)",
-        "gender":"f or m (in small letters)"
+        "image":"",
+        "category":"",
+        "featured":""
     }
 ]
