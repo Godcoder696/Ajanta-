@@ -65,14 +65,14 @@ export default function NavBar() {
             bgColor={"white"} 
             p={{base:3,md:2}}
             w="100%" 
-            justify={{xl:"space-evenly",md:'space-around',base:"space-between"}}
+            justify={{base:"space-between"}}
             zIndex={1}
         >
 
             {/* Logo */}
 
-            <Link to={"/"} boxSize={{base:10,sm:11,md:12,lg:13}}>
-                <Image src={AjantaBlack} alt='Ajanta' boxSize={12}/>
+            <Link to={"/"} boxSize={{base:10,sm:11,md:12,lg:13}} >
+                <Image src={AjantaBlack} alt='Ajanta' boxSize={12} ml={2}/>
             </Link>
 
             <HStack 
@@ -99,28 +99,6 @@ export default function NavBar() {
                     })
                 }
             </HStack>
-
-            <HStack 
-                bgColor={"#eaeaea"} 
-                h={"12"} 
-                borderRadius={10} 
-                justify={"space-evenly"} 
-                w={{base:"24vw",sm:"26vw",md:"28vw",xl:"30vw"}}
-                display={{base:'none',md:'flex'}}
-                cursor={"pointer"}
-                onClick={()=>{
-                    setSearchDrawer(true)
-                }}
-            >
-                <SearchIcon boxSize={5}ml={3}/>
-                <Input
-                    h={"70%"} 
-                    w={{base:"21vw",sm:"22vw",md:"23vw",xl:"25vw"}} 
-                    placeholder='Search clothes'
-                    cursor={"pointer"}
-                onClick={()=>setSearchDrawer(true)}
-                />
-            </HStack>
             
             <HStack w={20} display={{base:'flex',md:'none'}}justify="space-evenly">
                 <SearchIcon boxSize={5}ml={{md:3}} cursor={"pointer"} 
@@ -128,42 +106,7 @@ export default function NavBar() {
                 <HamburgerIcon boxSize={7} cursor={"pointer"} onClick={()=>setNavDrawer(true)}/>
             </HStack>
         </HStack>
-        
-        <Drawer
-          isOpen={searchDrawer}
-          placement='bottom'
-          size="full"
-          onClose={()=>{
-            setSearchDrawer(!searchDrawer)
-          }}
-        >
-        <DrawerOverlay />
-        <DrawerContent>
-            <CloseIcon cursor={"pointer"} 
-                mt={3}
-                mr={3}
-                alignSelf={"end"} 
-                onClick={()=> setSearchDrawer(false)}
-            />
-            <Center >
-                <HStack 
-                    bgColor={"#eaeaea"}
-                    h={"14"} 
-                    borderRadius={10} 
-                    justify={"space-evenly"} 
-                    w={{base:"260px",sm:"280px",md:"340px",xl:"380px"}}
-                >
-                    <SearchIcon boxSize={5}ml={3}/>
-                    <Input
-                        h={"80%"} 
-                        w={{base:"200px",sm:"220px",md:"300px",xl:"320px"}} 
-                        placeholder='Search clothes'
-                    />
-                </HStack>
-            </Center>
-            <SearchElements/>
-        </DrawerContent>
-      </Drawer>
+
         <NavMobDrawer></NavMobDrawer>
     </>
   )

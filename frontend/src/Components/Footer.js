@@ -37,7 +37,7 @@ export default function Footer() {
           <VStack alignItems={"start"} bgColor={""} id='contactUs'>
             <Text fontWeight={"bold"} fontSize={"x-large"} color={"white"}>CONTACT US</Text> 
             <Text fontSize={"medium"} color={"white"}>+91 9999999999</Text>
-            <Text fontSize={"medium"} color={"white"}>abc@example.com</Text>
+            <Text fontSize={"medium"} color={"white"}>Ajantasirsa@gmail.com</Text>
           </VStack>
 
           <Link href='https://maps.app.goo.gl/JYJ2PmfBrctkfzeN7' target='_blank' display={{base:"none",xl:"initial"}}>
