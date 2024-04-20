@@ -50,8 +50,8 @@ export default function MobFooter() {
                 </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4}>
-                    <Text p={2} fontSize={"large"} fontWeight={"medium"}>+91 99999-99999</Text>
-                    <Text p={2} fontSize={"large"} fontWeight={"medium"}>ajantasirsa@gmail.com</Text>
+                    <Text p={2} fontSize={"large"} fontWeight={"medium"}>01666-222231</Text>
+                    <Text p={2} fontSize={"large"} fontWeight={"medium"}>Ajantasirsa@gmail.com</Text>
                 </AccordionPanel>
             </AccordionItem>
             <AccordionItem p={6}>

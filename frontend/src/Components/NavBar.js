@@ -1,29 +1,23 @@
     // chakra ui imps
 import {
-    HStack,
-    Input,
-    Image,
     Button,
-    Drawer,
-    DrawerOverlay,
-    DrawerContent,
-    Center,
-} from '@chakra-ui/react'
+    HStack,
+    Image
+} from '@chakra-ui/react';
 
 // react-router-dom imp
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 // icons
-import { CloseIcon, HamburgerIcon, SearchIcon} from '@chakra-ui/icons';
+import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 
 // logo
 import AjantaBlack from '../Assets/Logo/Ajanta Sirsa.png';
 
 // hooks
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { AppState } from '../Context/AppProvider';
-import SearchElements from './SearchElements';
 import NavMobDrawer from './NavMobDrawer';
 
 

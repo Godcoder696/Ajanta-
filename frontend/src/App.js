@@ -22,6 +22,9 @@ import RootLayout from './Layouts/RootLayout';
 import {ChakraProvider} from '@chakra-ui/react'
 import AboutUs from './Pages/AboutUs';
 import Admin from './Pages/Admin';
+import { AppState } from './Context/AppProvider';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 // router paths
 const router= createBrowserRouter(
@@ -39,6 +42,26 @@ const router= createBrowserRouter(
 )
 
 function App() {
+  let {data,setData}= AppState([]);
+
+  async function getData (){
+    try {
+      
+      console.log("fetching");
+      let res=await axios.get("/all");
+      setData(res.data)
+      console.log(data);
+      console.log("items fetched");
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(()=>{
+    getData();
+  },[])
+  
   return (
     <ChakraProvider>
         <RouterProvider router={router}/>
