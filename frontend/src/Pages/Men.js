@@ -1,7 +1,7 @@
-import { Box, Center, Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
-import React from 'react'
-import Card from './Components/Card'
+import { SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import React from 'react';
 import { AppState } from '../Context/AppProvider';
+import Card from './Components/Card';
 
 export default function Men() {
   let {data}= AppState();
@@ -26,10 +26,12 @@ export default function Men() {
                   data.map((element) => {
                     return(
                       element.category==="men"?
-                      <Card
-                        src={element.image}
-                        desc='SHORT DESCRIPTION'
-                      />
+                      <span key= {element._id}>
+                        <Card
+                          src={element.image}
+                          desc='SHORT DESCRIPTION'
+                        />
+                      </span>
                       :
                       <></>
                     )

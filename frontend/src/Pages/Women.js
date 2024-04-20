@@ -1,11 +1,11 @@
-import { Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import React from 'react'
-import Card from './Components/Card'
+import { SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import React from 'react';
 import { AppState } from '../Context/AppProvider';
+import Card from './Components/Card';
 
 export default function Women() {
   let {data}= AppState();
-  
+
   return (
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
@@ -25,10 +25,12 @@ export default function Women() {
                 data.map((element) => {
                   return(
                     element.category==="women"?
-                    <Card
-                      src={element.image}
-                      desc='SHORT DESCRIPTION'
-                    />
+                    <span key= {element._id}>
+                      <Card
+                        src={element.image}
+                        desc='SHORT DESCRIPTION'
+                      />
+                    </span>
                     :
                     <></>
                   )

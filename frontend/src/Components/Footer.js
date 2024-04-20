@@ -1,8 +1,8 @@
-import { Box, Button, Card, CardBody, CardHeader, Center, HStack, Image, Link, SimpleGrid, SlideFade, Text, VStack } from '@chakra-ui/react'
-import AjantaLocation from '../Assets/Location/AjantaLocation.png';
-import { ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons';
-import MobFooter from './MobFooter';
+import { LinkIcon } from '@chakra-ui/icons';
+import { Box, Button, Center, Image, Link, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import { useState } from 'react';
+import AjantaLocation from '../Assets/Location/AjantaLocation.png';
+import MobFooter from './MobFooter';
 
 export default function Footer() {
   const brands=["Raymond","Reid & Taylor","OCM","Siyaram","Monte Carlo","Oxemberg","J. Hampstead"]

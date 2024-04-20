@@ -1,4 +1,4 @@
-import { Image, SimpleGrid } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import Card from '../Pages/Components/Card'
 

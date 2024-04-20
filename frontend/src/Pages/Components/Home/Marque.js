@@ -1,7 +1,7 @@
-import { Center, HStack, Image } from '@chakra-ui/react'
-import React, { useState } from 'react'
-import raymond from '../../../Assets/Brands/raymond-transparent-free-png.webp';
+import { Image } from '@chakra-ui/react';
+import React from 'react';
 import Marquee from "react-fast-marquee";
+import raymond from '../../../Assets/Brands/raymond-transparent-free-png.webp';
 
 export default function Marque() {
   
