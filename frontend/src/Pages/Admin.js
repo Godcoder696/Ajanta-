@@ -6,32 +6,47 @@ import Women from './Components/Admin/Women'
 import Slider from './Components/Admin/Slider'
 import Featured from './Components/Admin/Featured'
 import EditCard from './Components/Admin/EditCard';
+// import {v2 as cloudinary} from 'cloudinary';
+
+// cloudinary.config({
+
+// })
 
 function Admin() {
   let [file,setFile]= useState("");
   const onUpload=(e)=>{
-    console.log(e.target.files[0]);
     let reader= new FileReader();
     reader.readAsDataURL(e.target.files[0]);
+
     reader.onload=()=>{
       setFile(reader.result);
-      console.log(reader.result);
+      // console.log(reader.result);
     }
     reader.onerror=(error)=>{
-      console.log(error);
+      // console.log(error);
     }
   }
 
   const fileUpload=async ()=>{
-    axios.post("/all",
-      {
-        
-      }
-    );
+    try {  
+      axios.post("/all",
+        {
+          image: file,
+          category: "men",
+          featured: true
+        }
+      );
+      // console.log("File uploaded!");
+      // console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <>
-      <Tabs isFitted variant='enclosed' colorScheme='green'>
+      <input type="file" onChange={onUpload}/>
+      <input type="submit" onClick={fileUpload}/>
+      {/* <Tabs isFitted variant='enclosed' colorScheme='green'>
         <TabList mb='1em'>
           <Tab>MEN</Tab>
           <Tab>WOMEN</Tab>
@@ -52,7 +67,7 @@ function Admin() {
             <Slider></Slider>
           </TabPanel>
         </TabPanels>
-      </Tabs>
+      </Tabs> */}
     </>
   )
 }
