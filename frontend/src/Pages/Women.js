@@ -1,8 +1,11 @@
 import { Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
 import Card from './Components/Card'
+import { AppState } from '../Context/AppProvider';
 
 export default function Women() {
+  let {data}= AppState();
+  
   return (
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
@@ -18,22 +21,19 @@ export default function Women() {
               >
                 
                 {/* Items */}
-                {/* <Card 
-                  src={sample}
-                  desc='SHORT DESCRIPTION'
-                /> */}
-                <Card 
-                  src='https://www.koskii.com/cdn/shop/files/koskii-wine-kashmirithreadwork-georgette-designer-salwar-suit-ssrm0030431_wine_3_1800x1800.jpg?v=1690976407'
-                  desc='SHORT DESCRIPTION'
-                />
-                <Card 
-                  src='https://www.koskii.com/cdn/shop/files/koskii-wine-kashmirithreadwork-georgette-designer-salwar-suit-ssrm0030431_wine_3_1800x1800.jpg?v=1690976407'
-                  desc='SHORT DESCRIPTION'
-                />
-                <Card 
-                  src='https://www.koskii.com/cdn/shop/files/koskii-wine-kashmirithreadwork-georgette-designer-salwar-suit-ssrm0030431_wine_3_1800x1800.jpg?v=1690976407'
-                  desc='SHORT DESCRIPTION'
-                />
+                {
+                data.map((element) => {
+                  return(
+                    element.category==="women"?
+                    <Card
+                      src={element.image}
+                      desc='SHORT DESCRIPTION'
+                    />
+                    :
+                    <></>
+                  )
+                })
+              }
                 
               </SimpleGrid> 
             </TabPanel>

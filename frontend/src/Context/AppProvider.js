@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
 // import { useHistory } from "react-router-dom";
 
@@ -8,7 +9,7 @@ const AppProvider = ({ children }) => {
   const [navDrawer,setNavDrawer]= useState(false)
   const [navState,setNavState]= useState()
   let [adminBox,setAdminBox]= useState(false);
-  let [data,setData]= useState();
+  let [data,setData]= useState([]);
 
   return (
     <AppContext.Provider
@@ -20,7 +21,9 @@ const AppProvider = ({ children }) => {
         navState,
         setNavState,
         adminBox,
-        setAdminBox
+        setAdminBox,
+        data,
+        setData
       }}
     >
       {children}

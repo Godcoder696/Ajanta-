@@ -1,11 +1,10 @@
 import { Box, Text } from '@chakra-ui/react';
-import React, { useEffect } from 'react';
-import AboutData from './Data/AboutData.json';
-import Slider from './Components/Home/Slider';
+import React from 'react';
 import About1 from '../Assets/About/About1.jpg';
 import About2 from '../Assets/About/About2.jpg';
 import About3 from '../Assets/About/About3.jpg';
 import About4 from '../Assets/About/About4.jpg';
+import Slider from './Components/Home/Slider';
 
 export default function AboutUs() {
   const imgArr=[
@@ -19,8 +18,8 @@ export default function AboutUs() {
     <Box>
       <Slider imgArr={imgArr}></Slider>
       <Box px={10} py={6}>
-        <Text fontSize={"30px"} color='#2c7a7b' fontWeight={"bold"}>
-          <u>About Us</u>
+        <Text fontSize={"30px"} color='#2c7a7b' fontWeight={"bold"} >
+          About Us
         </Text>
         <br />
         <p>

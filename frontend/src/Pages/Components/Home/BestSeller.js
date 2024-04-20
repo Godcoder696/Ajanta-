@@ -1,29 +1,15 @@
-import { 
+import {
   Heading,
-  SimpleGrid } from '@chakra-ui/react'
-import Card from '../Card'
-import { useEffect, useState } from 'react'
-import axios from 'axios';
+  SimpleGrid
+} from '@chakra-ui/react';
+import Card from '../Card';
+import { AppState } from '../../../Context/AppProvider';
 
 export default function BestSeller() {
-  let [data,setData]= useState();
+  const {data}= AppState()
 
-  async function getData (){
-    try {
-      
-      console.log("fetching");
-      let {data}=await axios.get("/all");
-      setData(data)
-      console.log(data);
-      console.log("items fetched");
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  console.log(data);
 
-  useEffect(()=>{
-    getData();
-  },[])
   return (
     <>
       {/* Heading */}
@@ -36,34 +22,19 @@ export default function BestSeller() {
       >
         
         {/* Items */}
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
-        <Card
-          src='https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg'
-          desc='SHORT DESCRIPTION'
-        />
+        {
+          data.map((element) => {
+            return(
+              element.featured?
+              <Card
+                src={element.image}
+                desc='SHORT DESCRIPTION'
+              />
+              :
+              <></>
+            )
+          })
+        }
       </SimpleGrid> 
     </>
   )

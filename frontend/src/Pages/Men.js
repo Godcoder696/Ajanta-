@@ -1,8 +1,12 @@
 import { Box, Center, Image, SimpleGrid, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react'
 import React from 'react'
 import Card from './Components/Card'
+import { AppState } from '../Context/AppProvider';
 
 export default function Men() {
+  let {data}= AppState();
+
+  console.log(data);
   return (
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
@@ -18,32 +22,19 @@ export default function Men() {
               >
                 
                 {/* Items */}
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-                <Card 
-                  desc="SHORT DESCRIPTION"
-                  src="https://img.tatacliq.com/images/i14/437Wx649H/MP000000020063692_437Wx649H_202311121615421.jpeg"
-                />
-
-
+                {
+                  data.map((element) => {
+                    return(
+                      element.category==="men"?
+                      <Card
+                        src={element.image}
+                        desc='SHORT DESCRIPTION'
+                      />
+                      :
+                      <></>
+                    )
+                  })
+                }
               </SimpleGrid> 
             </TabPanel>
             <TabPanel>
