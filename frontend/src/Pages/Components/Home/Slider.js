@@ -1,6 +1,5 @@
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
-import { Button, Center, HStack, Image, Progress } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import { Center } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 
 export default function Slider(params) {

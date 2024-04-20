@@ -4,27 +4,25 @@ import './App.css';
 import {
   Route,
   RouterProvider,
-  createBrowserRouter, 
+  createBrowserRouter,
   createRoutesFromElements
-} 
-from 'react-router-dom'
+} from 'react-router-dom';
 
 // Pages import
+import Error from './Pages/Error';
 import Home from './Pages/Home';
 import Men from './Pages/Men';
 import Women from './Pages/Women';
-import Error from './Pages/Error';
 
 // RootLayout import
 import RootLayout from './Layouts/RootLayout';
 
 // Chakra Ui Imp
-import {ChakraProvider} from '@chakra-ui/react'
-import AboutUs from './Pages/AboutUs';
-import Admin from './Pages/Admin';
-import { AppState } from './Context/AppProvider';
+import { ChakraProvider } from '@chakra-ui/react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { AppState } from './Context/AppProvider';
+import AboutUs from './Pages/AboutUs';
 
 // router paths
 const router= createBrowserRouter(

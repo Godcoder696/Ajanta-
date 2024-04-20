@@ -2,8 +2,8 @@ import {
   Heading,
   SimpleGrid
 } from '@chakra-ui/react';
-import Card from '../Card';
 import { AppState } from '../../../Context/AppProvider';
+import Card from '../Card';
 
 export default function BestSeller() {
   const {data}= AppState()
@@ -23,13 +23,15 @@ export default function BestSeller() {
         
         {/* Items */}
         {
-          data.map((element) => {
+          data.map((element,id) => {
             return(
               element.featured?
-              <Card
-                src={element.image}
-                desc='SHORT DESCRIPTION'
-              />
+              <span key= {id}>
+                <Card
+                  src={element.image}
+                  desc='SHORT DESCRIPTION'
+                />
+              </span>
               :
               <></>
             )
