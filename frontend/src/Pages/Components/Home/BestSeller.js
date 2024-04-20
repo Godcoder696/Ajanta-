@@ -2,8 +2,28 @@ import {
   Heading,
   SimpleGrid } from '@chakra-ui/react'
 import Card from '../Card'
+import { useEffect, useState } from 'react'
+import axios from 'axios';
 
 export default function BestSeller() {
+  let [data,setData]= useState();
+
+  async function getData (){
+    try {
+      
+      console.log("fetching");
+      let {data}=await axios.get("/all");
+      setData(data)
+      console.log(data);
+      console.log("items fetched");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(()=>{
+    getData();
+  },[])
   return (
     <>
       {/* Heading */}
