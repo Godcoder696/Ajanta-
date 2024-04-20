@@ -17,7 +17,7 @@ import {Link} from 'react-router-dom'
 import { CloseIcon, HamburgerIcon, SearchIcon} from '@chakra-ui/icons';
 
 // logo
-import AjantaBlack from '../Assets/Ajanta Sirsa.png';
+import AjantaBlack from '../Assets/Logo/Ajanta Sirsa.png';
 
 // hooks
 import { useEffect, useState } from 'react';

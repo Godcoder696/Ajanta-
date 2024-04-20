@@ -20,24 +20,23 @@ function Admin() {
 
     reader.onload=()=>{
       setFile(reader.result);
-      // console.log(reader.result);
     }
     reader.onerror=(error)=>{
-      // console.log(error);
+      console.log(error);
     }
+
   }
 
   const fileUpload=async ()=>{
     try {  
-      axios.post("/all",
+      await axios.post("/all",
         {
           image: file,
-          category: "men",
-          featured: true
+          category: "women",
+          featured: false
         }
       );
-      // console.log("File uploaded!");
-      // console.log(res);
+      console.log("File uploaded!");
     } catch (error) {
       console.log(error);
     }
