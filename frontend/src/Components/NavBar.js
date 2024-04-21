@@ -27,7 +27,13 @@ export default function NavBar() {
     const {navState,setNavState}= AppState()
 
     // navBar items
-    const navItems=["home","about us","men","women"]
+    const navItems=[
+        {"key":["home","/"]},
+        {"key":["about us","/about us"]},
+        {"key":["men","/men"]},
+        {"key":["women","/women"]},
+        // {"key":["contact us","#contact-us"]}
+    ]
 
     const {searchDrawer,setSearchDrawer}= AppState()
     const {setNavDrawer,NavDrawer}= AppState()
@@ -78,25 +84,33 @@ export default function NavBar() {
                     // NavBar Elements
                     navItems.map((item,index)=>{
                         let a= navState===index?true:false;
+                        let i= item.key;
                         return(
-                            <Link to={item==="home"?"/":`/${item}`} key={index}>
+                            <Link to={i[1]} key={index}>
                                 <Button 
                                     variant={"ghost"} 
                                     colorScheme={a?'teal':'gray'} 
                                     onClick={()=>setNavState(index)}
                                     fontSize={{base:"10",sm:"11",md:"13",lg:"16"}}
                                 >
-                                    {item.toUpperCase()}
+                                    {i[0].toUpperCase()}
                                 </Button>
                             </Link>
                         )
-                    })
+                        
+                    }) 
                 }
+                <a href="#contact-us" >
+                    <Button 
+                        variant={"ghost"} 
+                        fontSize={{base:"10",sm:"11",md:"13",lg:"16"}}
+                    >
+                        CONTACT US
+                    </Button>
+                </a>
             </HStack>
             
             <HStack w={20} display={{base:'flex',md:'none'}}justify="space-evenly">
-                <SearchIcon boxSize={5}ml={{md:3}} cursor={"pointer"} 
-                onClick={()=>setSearchDrawer(true)}/>
                 <HamburgerIcon boxSize={7} cursor={"pointer"} onClick={()=>setNavDrawer(true)}/>
             </HStack>
         </HStack>

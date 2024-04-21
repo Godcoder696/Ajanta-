@@ -10,7 +10,7 @@ export default function Error() {
         <Link to={"/"} boxSize={{base:10,sm:11,md:12,lg:13}} >
           <Image src={AjantaBlack} alt='Ajanta' boxSize={"80px"} />
         </Link>
-        <Text fontSize={"30px"}>Page Not Found</Text>
+        <Text fontSize={"30px"} fontWeight={"light"}>Page Not Found</Text>
         <Link to={"/"}>
           <Text cursor={"pointer"} fontWeight={"semibold"} fontSize={"17px"} className='err-redirection'>
             Click Me!
