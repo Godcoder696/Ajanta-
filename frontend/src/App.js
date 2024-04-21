@@ -27,8 +27,8 @@ import AboutUs from './Pages/AboutUs';
 // router paths
 const router= createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' >
-      <Route path='/' element={<RootLayout/>}  errorElement={<Error/>}>
+    <Route path='/' errorElement={<Error/>}>
+      <Route path='/' element={<RootLayout/>}  >
         <Route index element={<Home/>}/>
         <Route index path='/men' element={<Men/>}/>
         <Route index path='/women' element={<Women/>}/>
