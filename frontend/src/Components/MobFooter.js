@@ -5,7 +5,7 @@ export default function MobFooter() {
     const brands=["Raymond","Reid & Taylor","OCM","Siyaram","Monte Carlo","Oxemberg","J. Hampstead"]
     const oBrands=["Birla Century","Linen Club","Arvind"]
   return (
-    <>
+    <div id='contact-us'>
         <Accordion defaultIndex={[0]} allowMultiple>
             <AccordionItem>
                 <h2>
@@ -40,7 +40,7 @@ export default function MobFooter() {
             </AccordionItem>
             <AccordionItem>
                 <h2>
-                <AccordionButton p={6} id='contactUs'>
+                <AccordionButton p={6}>
                     <Text as="span" flex='1' textAlign='left' 
                         fontSize={"x-large"} fontWeight={"bold"} color={"#184a49"}
                     >
@@ -65,6 +65,6 @@ export default function MobFooter() {
                 </Link>
             </AccordionItem>
         </Accordion>
-    </>
+    </div>
   )
 }

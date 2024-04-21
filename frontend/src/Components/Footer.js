@@ -9,7 +9,7 @@ export default function Footer() {
   const oBrands=["Birla Century","Linen Club","Arvind"]
   let [hover,setHover]= useState(false)
   return (
-    <>
+    <section id='contact-us'>
       <Center bgColor={"#2c7a7b"} color={"white"} h={{xl:"400px",md:"350px"}} w={"100%"} 
         display={{base:"none",md:"flex"}}>
 
@@ -73,6 +73,6 @@ export default function Footer() {
       <Box display={{md:"none"}}>
         <MobFooter></MobFooter>
       </Box>
-    </>
+    </section>
   )
 }
