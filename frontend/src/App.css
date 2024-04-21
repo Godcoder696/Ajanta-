@@ -9,3 +9,7 @@
       background-size: contain ;
     }
   }
+
+  .err-redirection:hover{
+    color: teal;
+  }
