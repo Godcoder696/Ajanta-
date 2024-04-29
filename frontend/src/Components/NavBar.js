@@ -9,7 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 
 // icons
-import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 // logo
 import AjantaBlack from '../Assets/Logo/Ajanta Sirsa.png';
@@ -100,14 +100,14 @@ export default function NavBar() {
                         
                     }) 
                 }
-                <a href="#contact-us" >
+                {/* <a href="#contact-us" >
                     <Button 
                         variant={"ghost"} 
                         fontSize={{base:"10",sm:"11",md:"13",lg:"16"}}
                     >
                         CONTACT US
                     </Button>
-                </a>
+                </a> */}
             </HStack>
             
             <HStack w={20} display={{base:'flex',md:'none'}}justify="space-evenly">
