@@ -40,7 +40,28 @@ export default function Men() {
               </SimpleGrid> 
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+            <SimpleGrid 
+                minChildWidth={{base:"150px",sm:"200px",md:"300px"}} 
+                mt={1} ml={"1%"} rowGap={8} columnGap={""}
+              >
+                
+                {/* Items */}
+                {
+                  data.map((element) => {
+                    return(
+                      element.category==="men"?
+                      <span key= {element._id}>
+                        <Card
+                          src={element.image}
+                          desc='SHORT DESCRIPTION'
+                        />
+                      </span>
+                      :
+                      <></>
+                    )
+                  })
+                }
+              </SimpleGrid> 
             </TabPanel>
           </TabPanels>
         </Tabs>

@@ -51,6 +51,7 @@ export default function MobFooter() {
                 </h2>
                 <AccordionPanel pb={4}>
                     <Text p={2} fontSize={"large"} fontWeight={"medium"}>01666-222231</Text>
+                    <Text p={2} fontSize={"large"} fontWeight={"medium"}>01666-222231</Text>
                     <Text p={2} fontSize={"large"} fontWeight={"medium"}>Ajantasirsa@gmail.com</Text>
                 </AccordionPanel>
             </AccordionItem>
