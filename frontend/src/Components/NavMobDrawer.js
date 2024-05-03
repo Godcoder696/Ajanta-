@@ -32,6 +32,14 @@ export default function NavMobDrawer() {
                         HOME
                     </AccordionItem>
                 </Link>
+                <Link href="/about us">
+                    <AccordionItem 
+                        p={6} w={"100%"} bgColor={""}
+                        fontSize={"x-large"} fontWeight={"bold"} color={"#184a49"}
+                    >
+                        ABOUT US
+                    </AccordionItem>
+                </Link>
                 <Link href="/men">
                     <AccordionItem 
                         p={6} w={"100%"} bgColor={""}
