@@ -17,9 +17,9 @@ export default function Marque() {
   return (
     <>
       <Marquee speed={80} pauseOnHover={true}
-        loop={0} gradient={true} gradientColor='#f1f2f4'
-        autoFill={false}
-      >
+        loop={0}
+         gradient={true} gradientColor='#f1f2f4'
+        autoFill={false}>
         <Image src={raymond} boxSize={"190px"} ml={20}/>
         <Image src={birla} height={"100px"} width={"350px"} ml={20}/>
         <Image src={JHampstead} height={"100px"} width={"250px"} ml={20}/>

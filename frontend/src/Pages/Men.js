@@ -11,8 +11,8 @@ export default function Men() {
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
           <TabList mb='1em'>
-            <Tab>Ajanta Cloth House</Tab>
-            <Tab>Ajanta Collection</Tab>
+            <Tab>Ajanta Collections/Clothouse</Tab>
+            {/* <Tab>Ajanta Collection</Tab> */}
           </TabList>
           <TabPanels>
             <TabPanel>

@@ -1,46 +1,38 @@
-import { Center } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 export default function Slider(params) {
+  let [height, setHeight]= useState(window.screen.width);
 
-  let [imgIndex,setImgIndex]= useState(0);
-  let [nextSlide,setNextSlide]= useState(false)
-  let [prevSlide,setPrevSlide]= useState(false)
+  const handleResize= ()=>{
+    setHeight(window.screen.width)
+  }
 
   useEffect(()=>{
-
-    const interval=setInterval(()=>{
-      setImgIndex((imgIndex+1)%5)
-    },2000)
-
-    if(nextSlide){
-      setImgIndex((imgIndex+1)%5)
-      setNextSlide(false)
-      return ()=> clearInterval(interval)  
-    }
-    if(prevSlide){
-      setImgIndex(()=> imgIndex===0?4:(imgIndex-1)%5)
-      setPrevSlide(false)
-      return ()=> clearInterval(interval)  
-    }
-
-    return ()=> clearInterval(interval)
-
-  },[imgIndex,nextSlide,prevSlide])
+    window.addEventListener("resize",handleResize,false)
+  },[])
+  
+  const divStyle = {
+    backgroundSize: 'contain',
+    'background-repeat': 'no-repeat',
+    'background-position': 'center',
+    height: height>1000? window.screen.height/2:window.screen.height/3,
+  } 
   return (
     <>
-      <Center>
-        <SimpleImageSlider
-          autoPlay="true"
-          slideDuration={0.6}
-          width={"100%"}
-          height={500}
-          images={params.imgArr}
-          showBullets={true}
-          showNavs={true}
-        />
-      </Center>
+      <div className="slide-container">
+        <Slide>
+          {params.imgArr.map((slideImage, index)=> (
+              <div key={index}>
+                <div className='divStyle' style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+                </div>
+              </div>
+            ))}
+        </Slide>
+      </div>
     </>
   )
 }

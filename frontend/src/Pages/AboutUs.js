@@ -3,7 +3,7 @@ import React from 'react';
 import About1 from '../Assets/About/About1.jpg';
 import About2 from '../Assets/About/About2.jpg';
 import About3 from '../Assets/About/About3.jpg';
-import About4 from '../Assets/About/About4.jpg';
+import About4 from '../Assets/About/About5.jpg';
 import Slider from './Components/Home/Slider';
 
 export default function AboutUs() {
