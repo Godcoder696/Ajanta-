@@ -56,15 +56,6 @@ export default function NavMobDrawer() {
                         WOMEN
                     </AccordionItem>
                 </Link>
-                <a href="#contact-us">
-                    <AccordionItem 
-                        p={6} w={"100%"} bgColor={""}
-                        fontSize={"x-large"} fontWeight={"bold"} color={"#184a49"}
-                        onClick={()=>setNavDrawer(false)}
-                    >
-                        CONTACT US
-                    </AccordionItem>
-                </a>
             </Accordion>
         </DrawerContent>
     </Drawer>
