@@ -11,7 +11,7 @@ export default function Women() {
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
           <TabList mb='1em'>
             <Tab>Ajanta Cloth House</Tab>
-            <Tab>Ajanta Collection</Tab>
+            <Tab>Ajanta Collections</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -40,7 +40,29 @@ export default function Women() {
               </SimpleGrid> 
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <SimpleGrid 
+                minChildWidth={{base:"150px",sm:"200px",md:"300px"}} 
+                mt={1} ml={"1%"} rowGap={8} 
+              >
+                
+                {/* Items */}
+                {
+                data.map((element) => {
+                  return(
+                    element.category==="women"?
+                    <span key= {element._id}>
+                      <Card
+                        src={element.image}
+                        desc='SHORT DESCRIPTION'
+                      />
+                    </span>
+                    :
+                    <></>
+                  )
+                })
+              }
+                
+              </SimpleGrid> 
             </TabPanel>
           </TabPanels>
         </Tabs>
