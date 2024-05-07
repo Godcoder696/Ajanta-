@@ -5,6 +5,7 @@ import { AppState } from '../Context/AppProvider'
 
 export default function NavMobDrawer() {
     const {navDrawer,setNavDrawer}= AppState()
+
   return (
     
     <Drawer

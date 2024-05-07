@@ -8,12 +8,10 @@ import Card from '../Card';
 export default function BestSeller() {
   const {data}= AppState()
 
-  console.log(data);
-
   return (
     <>
       {/* Heading */}
-      <Heading ml={"2%"} mt="7">OUR BESTSELLER</Heading>
+      <Heading ml={"2%"} mt="7" >OUR BESTSELLER</Heading>
 
       {/* Grid for Bestseller items */}
       <SimpleGrid p={"10px"} spacing={0} 

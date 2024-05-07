@@ -16,10 +16,10 @@ export default function Slider(params) {
   },[])
   
   const divStyle = {
-    backgroundSize: 'contain',
-    'background-repeat': 'no-repeat',
-    'background-position': 'center',
-    height: height>1000? window.screen.height/2:window.screen.height/3,
+    'backgroundSize': 'contain',
+    'backgroundRepeat': 'no-repeat',
+    'backgroundPosition': 'center',
+    'height': height>1000? window.screen.height/2:window.screen.height/3,
   } 
   return (
     <>
