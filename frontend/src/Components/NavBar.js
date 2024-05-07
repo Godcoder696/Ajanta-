@@ -63,7 +63,7 @@ export default function NavBar() {
         {/* NavBar */}
         <HStack id='navBar'
             bgColor={"white"} 
-            p={{base:3,md:2}}
+            p={{base:3,md:4}}
             w="100%" 
             justify={{base:"space-between"}}
             zIndex={1}
@@ -79,6 +79,7 @@ export default function NavBar() {
                 w={{base:"30vw",sm:"32vw",md:"33vw",xl:"37vw"}} 
                 justifyContent={"space-evenly"}
                 display={{base:'none',sm:'none',md:'flex'}}
+                marginRight={10}
             >
                 {
                     // NavBar Elements
