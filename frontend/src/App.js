@@ -13,6 +13,7 @@ import Error from './Pages/Error';
 import Home from './Pages/Home';
 import Men from './Pages/Men';
 import Women from './Pages/Women';
+import Admin from './Pages/Admin'
 
 // RootLayout import
 import RootLayout from './Layouts/RootLayout';
@@ -34,7 +35,7 @@ const router= createBrowserRouter(
         <Route index path='/women' element={<Women/>}/>
         <Route index path='/about us' element={<AboutUs/>}/>
       </Route>
-      {/* <Route path='/admin' element={<Admin/>}/> */}
+      <Route path='/admin' element={<Admin/>}/>
     </Route>
   )  
 )
