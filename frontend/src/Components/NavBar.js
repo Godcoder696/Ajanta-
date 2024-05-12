@@ -71,8 +71,8 @@ export default function NavBar() {
 
             {/* Logo */}
 
-            <Link to={"/"} boxSize={{base:10,sm:11,md:12,lg:13}} >
-                <Image src={AjantaBlack} alt='Ajanta' boxSize={12} ml={2}/>
+            <Link to={"/"} height={{base:10,sm:11,md:12,lg:13}} width={{base:10,sm:11,md:12,lg:13}}>
+                <Image src={AjantaBlack} alt='Ajanta' height={12} width={12} ml={2}/>
             </Link>
 
             <HStack 
@@ -112,7 +112,7 @@ export default function NavBar() {
             </HStack>
             
             <HStack w={20} display={{base:'flex',md:'none'}}justify="space-evenly">
-                <HamburgerIcon boxSize={7} cursor={"pointer"} onClick={()=>setNavDrawer(true)}/>
+                <HamburgerIcon height={7} width={7} cursor={"pointer"} onClick={()=>setNavDrawer(true)}/>
             </HStack>
         </HStack>
 
