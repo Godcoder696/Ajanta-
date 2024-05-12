@@ -4,6 +4,7 @@ import {
 } from '@chakra-ui/react';
 import { AppState } from '../../../Context/AppProvider';
 import Card from '../Card';
+import React from 'react';
 
 export default function BestSeller() {
   const {data}= AppState()
@@ -24,14 +25,14 @@ export default function BestSeller() {
           data.map((element,id) => {
             return(
               element.featured?
-              <span key= {id}>
+              <React.Fragment key={id}>
                 <Card
                   src={element.image}
                   desc='SHORT DESCRIPTION'
                 />
-              </span>
+              </React.Fragment>
               :
-              <></>
+              <React.Fragment key={id}></React.Fragment>
             )
           })
         }

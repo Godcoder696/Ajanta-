@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.655d5920.css",
+    "main.js": "/static/js/main.e221f139.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
+    "static/media/Slider1.tif": "/static/media/Slider1.079bbb1df1f66bca89ff.tif",
+    "static/media/Slider2.jpg": "/static/media/Slider2.736688a6cfdc7a7a9148.jpg",
+    "static/media/Slider3.jpg": "/static/media/Slider3.2a73622bb98af6c5b9a1.jpg",
+    "static/media/About1.jpg": "/static/media/About1.f2239ddf0b5e2e9625bc.jpg",
+    "static/media/About4.jpg": "/static/media/About4.aec160f058e550c9f522.jpg",
+    "static/media/Slider5.jpg": "/static/media/Slider5.e475dd087bc966fa27aa.jpg",
+    "static/media/Slider4.jpg": "/static/media/Slider4.b4646e4c15488780cec6.jpg",
+    "static/media/Reid&Taylor.png": "/static/media/Reid&Taylor.7a097a630065c4e232d0.png",
+    "static/media/Monte Carlo.png": "/static/media/Monte Carlo.0af045e7f699621a6ec4.png",
+    "static/media/AjantaLocation.png": "/static/media/AjantaLocation.94a6d5b5f37b880ed7d4.png",
+    "static/media/Ajanta_Sirsa-removebg.png": "/static/media/Ajanta_Sirsa-removebg.f8df98a5288b433c0dd0.png",
+    "static/media/Ajanta Sirsa.png": "/static/media/Ajanta Sirsa.a0c06b320ebc5590a52e.png",
+    "static/media/JHampstead.png": "/static/media/JHampstead.7409be698a1e911b43c6.png",
+    "static/media/raymond-transparent-free-png.webp": "/static/media/raymond-transparent-free-png.9d356713adf8f1b69d29.webp",
+    "index.html": "/index.html",
+    "main.655d5920.css.map": "/static/css/main.655d5920.css.map",
+    "main.e221f139.js.map": "/static/js/main.e221f139.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.655d5920.css",
+    "static/js/main.e221f139.js"
+  ]
+}

@@ -23,17 +23,17 @@ export default function Men() {
                 
                 {/* Items */}
                 {
-                  data.map((element) => {
+                  data.map((element,id) => {
                     return(
                       element.category==="men"?
-                      <span key= {element._id}>
+                      <React.Fragment key= {id}>
                         <Card
                           src={element.image}
                           desc='SHORT DESCRIPTION'
                         />
-                      </span>
+                      </React.Fragment>
                       :
-                      <></>
+                      <React.Fragment key= {id}></React.Fragment>
                     )
                   })
                 }
@@ -47,17 +47,17 @@ export default function Men() {
                 
                 {/* Items */}
                 {
-                  data.map((element) => {
+                  data.map((element,id) => {
                     return(
                       element.category==="men"?
-                      <span key= {element._id}>
+                      <React.Fragment key= {id}>
                         <Card
                           src={element.image}
                           desc='SHORT DESCRIPTION'
                         />
-                      </span>
+                      </React.Fragment>
                       :
-                      <></>
+                      <React.Fragment key= {id}></React.Fragment>
                     )
                   })
                 }

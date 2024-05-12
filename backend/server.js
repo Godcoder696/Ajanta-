@@ -7,6 +7,7 @@ const bodyParser= require('body-parser');
 const Items = require('./models/Items');
 const v2= require('cloudinary');
 const connectClodinary= require('./config/CloudinaryConfig');
+const path = require('path');
 
 dotenv.config();
 
@@ -72,3 +73,22 @@ app.post('/all',async (req,res)=>{
         res.json({"error": error});
     }
 })
+
+// ---------------------------- DEPLOYMENT -------------------------------
+
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
+
+
+// ---------------------------- DEPLOYMENT -------------------------------
