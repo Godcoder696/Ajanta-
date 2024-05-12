@@ -33,7 +33,8 @@ function Admin() {
         {
           image: file,
           category: "women",
-          featured: false
+          featured: false,
+          tab: 1
         }
       );
       console.log("File uploaded!");

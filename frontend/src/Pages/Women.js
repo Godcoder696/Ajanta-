@@ -5,7 +5,7 @@ import Card from './Components/Card';
 
 export default function Women() {
   let {data}= AppState();
-
+  console.log(data);
   return (
     <>
         <Tabs isFitted variant='enclosed' p={3} colorScheme='teal'>
@@ -24,7 +24,7 @@ export default function Women() {
                 {
                 data.map((element,id) => {
                   return(
-                    element.category==="women"?
+                    (element.category==="women" && element.tab===0)?
                     <React.Fragment key= {id}>
                       <Card
                         src={element.image}
@@ -49,7 +49,7 @@ export default function Women() {
                 {
                 data.map((element,id) => {
                   return(
-                    element.category==="women"?
+                    (element.tab===undefined && element.category==="women")?
                     <React.Fragment key= {id} >
                       <Card
                         src={element.image}

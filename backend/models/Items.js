@@ -13,7 +13,11 @@ const Items= mongoose.Schema(
         featured:{
             type: Boolean,
             default: false
-        }
+        },
+        tab:{
+            type: Number,
+            required: false
+        }   
     }
 )
 
