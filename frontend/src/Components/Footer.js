@@ -36,8 +36,8 @@ export default function Footer() {
           </VStack>
           <VStack alignItems={"start"} bgColor={""} id='contactUs'>
             <Text fontWeight={"bold"} fontSize={"x-large"} color={"white"}>CONTACT US</Text> 
-            <Text fontSize={"medium"} color={"white"}>01666-222231</Text>
-            <Text fontSize={"medium"} color={"white"}>92543-22231</Text>
+            <Text fontSize={"medium"} color={"white"}>01666222231</Text>
+            <Text fontSize={"medium"} color={"white"}>9254322231</Text>
             <Text fontSize={"medium"} color={"white"}>Ajantasirsa@gmail.com</Text>
           </VStack>
 
