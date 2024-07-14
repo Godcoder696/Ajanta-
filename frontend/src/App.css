@@ -18,3 +18,18 @@
     color: teal;
     
   }
+
+input[type="file"] {
+  display: none;
+}
+  
+.custom-file-upload {
+  outline: 2px dashed gray;
+  display: inline-block;
+  padding: 40px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

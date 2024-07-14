@@ -1,9 +1,11 @@
 import { Center, HStack, Image } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { AppState } from '../../../Context/AppProvider';
 import {EditIcon, DeleteIcon} from '@chakra-ui/icons'
+import EditCard from './EditCard';
 
 function Card() {
+    const [openDrawer,setOpenDrawer]= useState(false);
   return (
     <>
         <Center
@@ -18,12 +20,14 @@ function Card() {
                     borderRadius={20}
                 />
                 <HStack bgColor="#f1f2f4" py={2} px={4} rounded="1rem" mt={2} spacing={4}>
-                <EditIcon h={5} w={5} _hover={{"color": "teal"}}/>
+                <EditIcon h={5} w={5} _hover={{"color": "teal"}} 
+                    onClick={()=>{setOpenDrawer(true)}}
+                />
                 <DeleteIcon h={5} w={5} _hover={{"color": "teal"}}/>
                 </HStack >
-
             </Center>
         </Center>
+        <EditCard openDrawer= {openDrawer} setOpenDrawer={setOpenDrawer}/>
     </>
   )
 }
