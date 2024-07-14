@@ -6,6 +6,7 @@ import Women from './Components/Admin/Women'
 import Slider from './Components/Admin/Slider'
 import Featured from './Components/Admin/Featured'
 import EditCard from './Components/Admin/EditCard';
+import AdminLayout from './Components/Admin/AdminLayout';
 // import {v2 as cloudinary} from 'cloudinary';
 
 // cloudinary.config({
@@ -44,9 +45,9 @@ function Admin() {
   }
   return (
     <>
-      <input type="file" onChange={onUpload}/>
+      {/* <input type="file" onChange={onUpload}/>
       <input type="submit" onClick={fileUpload}/>
-      {/* <Tabs isFitted variant='enclosed' colorScheme='green'>
+      <Tabs isFitted variant='enclosed' colorScheme='green'>
         <TabList mb='1em'>
           <Tab>MEN</Tab>
           <Tab>WOMEN</Tab>
@@ -68,6 +69,7 @@ function Admin() {
           </TabPanel>
         </TabPanels>
       </Tabs> */}
+      <AdminLayout/>
     </>
   )
 }

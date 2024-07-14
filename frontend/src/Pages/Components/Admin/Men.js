@@ -4,8 +4,8 @@ import Card from './Card'
 
 function Men() {
   return (
-    <SimpleGrid minChildWidth={{base:"150px",sm:"200px",md:"300px"}} 
-    mt={1} ml={"1%"} rowGap={8} columnGap={""}>
+    <SimpleGrid minChildWidth={{base:"150px",sm:"200px",md:"300px"}} w="100%" 
+    mt={3} ml={"1%"} rowGap={8} columnGap={20}>
       <Card></Card>
       
       <Card></Card>
