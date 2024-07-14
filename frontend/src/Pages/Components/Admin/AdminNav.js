@@ -5,7 +5,21 @@ import { Link } from 'react-router-dom'
 function AdminNav({setNav,nav}) {
     const navbar= ["Men","Women","Analytics"]
   return (
-    <VStack w="20vw" h="100vh" bgColor="#f1f2f4" alignItems="start" px={7} py={6}>
+    <VStack 
+        w={
+            {
+                md:"35vw",
+                xl:"20vw"
+            }
+        } 
+        h="100vh" bgColor="#f1f2f4" alignItems="start" px={7} py={6}
+        display={
+            {
+                base:'none',
+                md:'initial'
+            }
+        }
+    >
         {
             navbar.map((item,key)=>{
                 return (
@@ -19,6 +33,7 @@ function AdminNav({setNav,nav}) {
                         onClick={()=>{
                             setNav(key);
                         }}
+                        mt={4}
                     >
                         <Text fontSize={17}>{item}</Text>
                     </Box>
