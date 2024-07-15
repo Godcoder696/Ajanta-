@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import AdminLogin from './AdminLogin';
 import AdminNav from './AdminNav';
 import Dashboard from './Dashboard';
+import { AppState } from '../../../Context/AppProvider';
 
 function AdminLayout() {
   const [nav, setNav]= useState(0);
@@ -21,7 +22,7 @@ function AdminLayout() {
       <>
         <HStack>
           <AdminNav setNav={setNav} nav={nav}/>
-          <Dashboard setNav={setNav} nav={nav}/>
+          <Dashboard setNav={setNav} nav={nav} />
         </HStack>
       </>
     )

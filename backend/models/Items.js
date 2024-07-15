@@ -16,8 +16,14 @@ const Items= mongoose.Schema(
         },
         tab:{
             type: Number,
+            required: false,
+            default: null
+        },
+        assetId: {
+            type: String,
+            default: null,
             required: false
-        }   
+        }  
     }
 )
 

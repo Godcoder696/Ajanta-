@@ -49,7 +49,7 @@ export default function Women() {
                 {
                 data.map((element,id) => {
                   return(
-                    (element.tab===undefined && element.category==="women")?
+                    (( element.tab===null || element.tab===1) && element.category==="women")?
                     <React.Fragment key= {id} >
                       <Card
                         src={element.image}

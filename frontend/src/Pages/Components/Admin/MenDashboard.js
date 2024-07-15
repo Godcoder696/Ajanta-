@@ -8,7 +8,7 @@ function MenDashboard({openDrawer, setOpenDrawer}) {
   
   return (
     <>
-        <Men/>
+      <Men/>
     </>
   )
 }
